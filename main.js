@@ -209,17 +209,17 @@ async function download() {
 	);
 	downloadModal.open();
 
-	// const ical = new CustomCalendar(
-	// 	selectedSports.length == 1
-	// 		? "Tokyo 2020 - " + allSports[selectedSports[0]].name
-	// 		: "Tokyo 2020"
-	// );
+	const ical = new CustomCalendar(
+		selectedSports.length == 1
+			? "Tokyo 2020 - " + allSports[selectedSports[0]].name
+			: "Tokyo 2020"
+	);
 
-	// for (let sportname of selectedSports) {
-	// 	await addSportToCal(ical, allSports[sportname]);
-	// }
+	for (let sportname of selectedSports) {
+		await addSportToCal(ical, allSports[sportname]);
+	}
 
-	// ical.download();
+	ical.download();
 }
 
 function setupBasketball3x3() {
